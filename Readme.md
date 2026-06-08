@@ -35,7 +35,7 @@ The project demonstrates:
 * View Events
 * Register for Events
 * Cancel Event Registrations
-* View Registered Events
+* View All Registered Events
 
 ### Admin Features
 
@@ -46,8 +46,8 @@ The project demonstrates:
 
 ### Event Management
 
-* Event Capacity Limits
-* Unlimited Capacity Support
+* Event Participant Capacity Limits
+* Unlimited Participant Capacity Support
 * Duplicate Registration Prevention
 * Registration Tracking
 
