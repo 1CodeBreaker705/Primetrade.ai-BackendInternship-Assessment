@@ -22,11 +22,18 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+@app.get("/")
+async def health_check():
+    return {
+        "status": "ok",
+        "message": "EventHub API is running"
+    }
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://your-frontend-domain.vercel.app"
+        "https://primetrade-ai-backend-internship-as.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
