@@ -22,13 +22,6 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-@app.get("/")
-async def health_check():
-    return {
-        "status": "ok",
-        "message": "EventHub API is running"
-    }
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -39,6 +32,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def health_check():
+    return {
+        "status": "ok",
+        "message": "EventHub API is running"
+    }
 
 api_v1 = APIRouter(prefix="/api/v1")
 
