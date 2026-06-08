@@ -33,7 +33,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://primetrade-ai-backend-internship-as.vercel.app/"
+        "https://primetrade-ai-backend-internship-as.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
